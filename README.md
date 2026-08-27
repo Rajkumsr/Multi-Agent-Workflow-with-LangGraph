@@ -61,7 +61,9 @@ PYTHONPATH=. pytest tests/
 The workflow successfully demonstrates cyclical agent interactions. The graph output shows the state flowing from planner to worker to reviewer, looping back for revisions, and ultimately succeeding or halting after reaching the rejection threshold.
 
 ## Screenshots / Demo
-*Starting Multi-Agent Workflow...
+
+```text
+Starting Multi-Agent Workflow...
 
 --- PLANNER ---
 --- Finished node: planner ---
@@ -77,7 +79,8 @@ Reviewer decision: REJECTED. Feedback: The draft lacks a clear structure and fai
 MAX REJECTIONS REACHED. Stopping workflow.
 --- Finished node: reviewer ---
 
-Workflow Completed!*
+Workflow Completed!
+```
 
 ## Key Learnings
 - Explicitly defining state using `TypedDict` and reducing functions (like `operator.add` for the rejection counter) is extremely powerful for predictable agent behavior.
